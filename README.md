@@ -1,1 +1,1 @@
-# A JavaScript based calculator. 
+# Calculator built Using JS.  
