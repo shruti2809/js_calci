@@ -44,6 +44,9 @@ Calci = {
       for (var i = 0; i < keys.length; i++) {
         $(document).bind('keyup', keys[i], Calci.handleInputFunctionWrapper(keys[i]));
       }
+        $(document).bind('keyup', "esc", Calci.handleInput("AC"));
+        $(document).bind('keyup', "backspace", Calci.handleInput("DEL"));
+        $(document).bind('keyup', "return", Calci.handleInput("="));
     }
   }
 
