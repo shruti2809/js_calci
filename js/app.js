@@ -3,13 +3,17 @@
 Calci = { 
   clearPreview: function() {
     $('#preview').html("");
+    $('#result').html("0");
   },
   deleteCharOnKeypress: function() {
     var preview = $('#preview').html();
     $('#preview').html(preview.slice(0, preview.length - 1));
   },
-  handleKeyPress: function(key) {
-    switch($(key).text()) {
+   calculateResult: function () {
+    $('#result').html(eval($('#preview').html()));
+  },
+  handleInput: function(val) {
+    switch(val) {
       case "AC":
         Calci.clearPreview();
         break;
@@ -17,18 +21,33 @@ Calci = {
         Calci.deleteCharOnKeypress();
         break;
       case "=":
-        console.log($(key).text);
+        Calci.calculateResult();
         break;
       default:
       $('#preview').html(
-        $('#preview').html() + $(key).text()
+        $('#preview').html() + val
         );
+      }
+    },
+    forKeyClick: function() {
+      $('.key').click(function(event){
+        Calci.handleInput($(this).text());
+      });
+    },
+    handleInputFunctionWrapper: function(val) {
+      return function(){
+        Calci.handleInput(val);
+      }
+    },
+    forKeyPress: function() {
+      var keys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "+", "-", "*", "/", "="];
+      for (var i = 0; i < keys.length; i++) {
+        $(document).bind('keyup', keys[i], Calci.handleInputFunctionWrapper(keys[i]));
       }
     }
   }
 
 $(document).ready(function() {
-  $('.key').click(function(event){
-    Calci.handleKeyPress(this);
-  });
+  Calci.forKeyClick();
+  Calci.forKeyPress();
 });
