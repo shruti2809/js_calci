@@ -1,0 +1,78 @@
+$primary-color: #26C281; // Wisteria
+$lighter-primary-color: #00B16A; //Amethyst
+$secondary-color: #ecf0f1; // Clouds
+
+.vcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+html {
+  background-color: $secondary-color;
+  
+  body {
+    height: 100vh;
+  }
+  
+  #calculator {
+    width: 48vmin;
+    height: 84vmin;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 25px;
+    
+    #result {
+      background-color: #34495E;
+      //border-top: 10px;
+      height: 16vmin;
+      text-align: right;
+      line-height: 16vmin;
+      font-size: 8vmin;
+      padding: 0 2vmin;
+      // border-top-right-radius: 50%;
+      // border-top-left-radius: 50%;
+    }
+    
+    #preview {
+      background-color: #AEA8D3;
+      height: 8vmin;
+      text-align: right;
+      line-height: 8vmin;
+      font-size: 3vmin;
+      padding: 0 2vmin;
+    }
+    
+    .key {
+      padding: 0;
+      height: 12vmin;
+      width: 12vmin;
+      background-color: $primary-color;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 12vmin;
+      font-size: 3vmin;
+      border-radius: 50%;
+      
+      &#key-AC {
+        width: 24vmin;
+      }
+      
+      &#key-EQL {
+        width: 24vmin;
+      }
+      
+     &:hover {
+        background-color: $lighter-primary-color;
+      }
+      
+      &:active {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+    
+    .key-group {
+      padding: 0;
+    }
+  }
+}
