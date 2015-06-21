@@ -11,8 +11,7 @@ html {
     width: 48vmin;
     height: 84vmin;
     background-color: #26C281;
-    color: #ecf0f1;
-    border-radius: 25px; }
+    color: #ecf0f1; }
     html #calculator #result {
       background-color: #34495E;
       height: 16vmin;

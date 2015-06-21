@@ -20,7 +20,7 @@ html {
     height: 84vmin;
     background-color: $primary-color;
     color: $secondary-color;
-    border-radius: 25px;
+   //border-radius: 25px;
     
     #result {
       background-color: #34495E;
@@ -64,6 +64,7 @@ html {
       
      &:hover {
         background-color: $lighter-primary-color;
+        // border-radius: 50%;
       }
       
       &:active {
