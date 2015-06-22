@@ -10,9 +10,14 @@ Calci = {
     $('#preview').html(preview.slice(0, preview.length - 1));
   },
    calculateResult: function () {
-    $('#result').html(eval($('#preview').html()));
+    var result = eval($('#preview').html());
+    $('#result').html(result);
+    $('#preview').html(result);
   },
   handleInput: function(val) {
+    if (val == 'X'){
+      val = '*';
+    }
     switch(val) {
       case "AC":
         Calci.clearPreview();
