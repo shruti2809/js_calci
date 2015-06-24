@@ -3,48 +3,51 @@
   top: 50%;
   transform: translateY(-50%); }
 
-html {
-  background-color: #ecf0f1; }
-  html body {
-    height: 100vh; }
-  html #calculator {
-    width: 48vmin;
-    height: 84vmin;
+html body {
+  height: 100vh; }
+html #calculator {
+  width: 48vmin;
+  height: 84vmin;
+  color: #ecf0f1;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em; }
+  html #calculator #result {
+    background-color: #34495E;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    height: 16vmin;
+    text-align: right;
+    line-height: 16vmin;
+    font-size: 8vmin;
+    padding: 0 2vmin; }
+  html #calculator #preview {
+    background-color: #FC6D89;
+    height: 8vmin;
+    text-align: right;
+    line-height: 8vmin;
+    font-size: 3vmin;
+    padding: 0 2vmin; }
+  html #calculator .key {
+    padding: 0;
+    height: 12vmin;
+    width: 12vmin;
     background-color: #26C281;
-    color: #ecf0f1; }
-    html #calculator #result {
-      background-color: #34495E;
-      height: 16vmin;
-      text-align: right;
-      line-height: 16vmin;
-      font-size: 8vmin;
-      padding: 0 2vmin; }
-    html #calculator #preview {
-      background-color: #FAC8BE;
-      height: 8vmin;
-      text-align: right;
-      line-height: 8vmin;
-      font-size: 3vmin;
-      padding: 0 2vmin; }
-    html #calculator .key {
-      padding: 0;
-      height: 12vmin;
-      width: 12vmin;
-      background-color: #26C281;
-      box-sizing: border-box;
-      text-align: center;
-      line-height: 12vmin;
-      font-size: 3vmin;
-      border-radius: 50%; }
-      html #calculator .key#key-AC {
-        width: 24vmin; }
-      html #calculator .key#key-EQL {
-        width: 24vmin; }
-      html #calculator .key:hover {
-        background-color: #00B16A; }
-      html #calculator .key:active {
-        background-color: #1e9765; }
-    html #calculator .key-group {
-      padding: 0; }
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 12vmin;
+    font-size: 3vmin;
+    border: 1px solid #2c3e50; }
+    html #calculator .key#key-AC {
+      width: 24vmin;
+      border-bottom-left-radius: 1em; }
+    html #calculator .key#key-EQL {
+      width: 24vmin;
+      border-bottom-right-radius: 1em; }
+    html #calculator .key:hover {
+      background-color: #00B16A; }
+    html #calculator .key:active {
+      background-color: #1e9765; }
+  html #calculator .key-group {
+    padding: 0; }
 
 /*# sourceMappingURL=main.css.map */

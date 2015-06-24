@@ -1,6 +1,6 @@
-$primary-color: #26C281; // Wisteria
-$lighter-primary-color: #00B16A; //Amethyst
-$secondary-color: #ecf0f1; // Clouds
+$primary-color: #26C281; 
+$lighter-primary-color: #00B16A; 
+$secondary-color: #ecf0f1; 
 
 .vcenter {
   position: relative;
@@ -9,7 +9,6 @@ $secondary-color: #ecf0f1; // Clouds
 }
 
 html {
-  background-color: $secondary-color;
   
   body {
     height: 100vh;
@@ -18,24 +17,23 @@ html {
   #calculator {
     width: 48vmin;
     height: 84vmin;
-    background-color: $primary-color;
     color: $secondary-color;
-   //border-radius: 25px;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
     
     #result {
       background-color: #34495E;
-      //border-top: 10px;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
       height: 16vmin;
       text-align: right;
       line-height: 16vmin;
       font-size: 8vmin;
       padding: 0 2vmin;
-      // border-top-right-radius: 50%;
-      // border-top-left-radius: 50%;
     }
     
     #preview {
-      background-color: #FAC8BE;
+      background-color: #FC6D89;
       height: 8vmin;
       text-align: right;
       line-height: 8vmin;
@@ -52,14 +50,16 @@ html {
       text-align: center;
       line-height: 12vmin;
       font-size: 3vmin;
-      border-radius: 50%;
+      border: 1px solid #2c3e50;
       
       &#key-AC {
         width: 24vmin;
+        border-bottom-left-radius: 1em;
       }
       
       &#key-EQL {
         width: 24vmin;
+        border-bottom-right-radius:1em;
       }
       
      &:hover {
